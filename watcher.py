@@ -22,11 +22,18 @@ import random
 import sys
 from datetime import datetime
 
-# Optional: paste a Discord webhook URL here to also get pinged on your phone
-# (right up your alley given the bots you've already got running).
+# ----------------------- Configuration -----------------------
+URL = "https://massarservice.men.gov.ma/moutamadris"
+BASE_INTERVAL = 60      # seconds between checks when things are going well
+MAX_INTERVAL = 300      # cap on the exponential backoff
+BACKOFF_FACTOR = 1.4    # how fast the interval grows after each failure
+TIMEOUT = 10            # seconds to wait for a response before giving up
+LOG_FILE = "massar_watch.log"
+
+# Optional: paste a Discord webhook URL here to also get notified on your phone.
 # Leave empty and you still get console output + a beep.
 DISCORD_WEBHOOK = ""
-# -----------------------------------------
+# ----------------------------------------------------------------
 
 
 def log(message):
@@ -55,14 +62,16 @@ def beep():
         winsound.Beep(1000, 400)
         winsound.Beep(1300, 400)
     except ImportError:
-        print("\a")  # fallback terminal bell on non-Windows
+        print("\a")  # fallback terminal bell on non-Windows (may be silent depending on terminal settings)
 
 
 def check_once():
     """Returns (is_up, detail) without ever touching login/credentials."""
     try:
         resp = requests.get(URL, timeout=TIMEOUT)
-        return True, f"HTTP {resp.status_code}"
+        if resp.ok:  # 2xx/3xx only - a 502/503 during heavy load is NOT "up"
+            return True, f"HTTP {resp.status_code}"
+        return False, f"HTTP {resp.status_code}"
     except requests.exceptions.ConnectionError:
         return False, "connection reset/refused"
     except requests.exceptions.Timeout:
