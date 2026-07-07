@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-success)
 
-A lightweight Python utility that monitors the Morocco Massar portal and alerts you as soon as it becomes reachable during periods of heavy traffic.
+A lightweight Python utility that monitors the Morocco Massar portal and notifies you as soon as it becomes reachable during periods of heavy traffic.
 
 
 ## Screenshot
@@ -12,13 +12,15 @@ A lightweight Python utility that monitors the Morocco Massar portal and alerts 
 ![Massar Watcher running](screenshots/terminal.png)
 
 
-## Why?
+## Quick Start
 
-Every year during Morocco's baccalaureate results period, the Massar portal receives a huge number of simultaneous visitors. This often makes the website slow or temporarily unavailable, leading many students and parents to spend hours manually refreshing the page.
+```bash
+git clone https://github.com/Nodix01/massar-watcher.git
+cd massar-watcher
+pip install -r requirements.txt
+python watcher.py
+```
 
-Massar Watcher automates that process by checking the portal at configurable intervals and notifying you the moment it's available again.
-
-I originally built this as a personal utility and have now made it public so others can use and improve it.
 
 ## Features
 
@@ -28,6 +30,16 @@ I originally built this as a personal utility and have now made it public so oth
 - Optional Discord webhook notification
 - Lightweight and easy to run
 - Cross-platform (Windows, Linux, macOS)
+
+  
+
+  ## Why?
+
+Every year, especially during Morocco's baccalaureate results period, the Massar portal experiences a surge in traffic. This can make the website slow or temporarily unavailable, leaving many students and parents repeatedly refreshing the page for long periods.
+
+Massar Watcher automates that process by periodically checking the portal and notifying you as soon as it becomes reachable again.
+
+I originally built this as a personal utility and have now made it public so others can use and improve it.
 
 ## Installation
 
