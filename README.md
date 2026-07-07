@@ -1,5 +1,11 @@
 # Massar Watcher
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/status-active-success) 
+
+# Massar Watcher
+
 A lightweight Python utility that monitors the Morocco Massar portal and alerts you as soon as it becomes reachable during periods of heavy traffic.
 
 ## Why?
