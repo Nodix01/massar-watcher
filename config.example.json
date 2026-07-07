@@ -1,0 +1,8 @@
+{
+  "URL": "https://massarservice.men.gov.ma/moutamadris",
+  "BASE_INTERVAL": 60,
+  "MAX_INTERVAL": 300,
+  "BACKOFF_FACTOR": 1.4,
+  "TIMEOUT": 10,
+  "LOG_FILE": "massar_watch.log"
+}

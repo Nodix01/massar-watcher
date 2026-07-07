@@ -1,0 +1,11 @@
+[2026-07-03 19:19:29] Watching https://massarservice.men.gov.ma/moutamadris
+[2026-07-03 19:19:29] Checking every 60-300s, backing off on repeated failures. Ctrl+C to stop.
+[2026-07-03 19:19:39] still down (#1) - connection reset/refused, next check in ~60s
+[2026-07-03 19:20:52] UP after 2 check(s) - HTTP 200
+[2026-07-03 19:20:52] Massar is reachable again (HTTP 200) - go log in and check your grades.
+[2026-07-03 19:21:27] Watching https://massarservice.men.gov.ma/moutamadris
+[2026-07-03 19:21:27] Checking every 60-300s, backing off on repeated failures. Ctrl+C to stop.
+[2026-07-03 19:21:32] still down (#1) - connection reset/refused, next check in ~60s
+[2026-07-03 19:22:48] still down (#2) - connection reset/refused, next check in ~84s
+[2026-07-03 19:24:20] UP after 3 check(s) - HTTP 200
+[2026-07-03 19:24:20] Massar is reachable again (HTTP 200) - go log in and check your grades.
