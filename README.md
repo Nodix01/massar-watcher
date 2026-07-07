@@ -30,10 +30,11 @@ python watcher.py
 - Optional Discord webhook notification
 - Lightweight and easy to run
 - Cross-platform (Windows, Linux, macOS)
+- Timestamped console logging
 
   
 
-  ## Why?
+## Why?
 
 Every year, especially during Morocco's baccalaureate results period, the Massar portal experiences a surge in traffic. This can make the website slow or temporarily unavailable, leaving many students and parents repeatedly refreshing the page for long periods.
 
@@ -58,7 +59,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
-Edit the configuration variables near the top of watcher.py to customize:
+Edit the configuration variables near the top of `watcher.py` to customize:
 
 - Target URL
 - Check interval
