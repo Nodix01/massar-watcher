@@ -6,6 +6,12 @@
 
 A lightweight Python utility that monitors the Morocco Massar portal and alerts you as soon as it becomes reachable during periods of heavy traffic.
 
+
+## Screenshot
+
+![Massar Watcher running](screenshots/terminal.png)
+
+
 ## Why?
 
 Every year during Morocco's baccalaureate results period, the Massar portal receives a huge number of simultaneous visitors. This often makes the website slow or temporarily unavailable, leading many students and parents to spend hours manually refreshing the page.
