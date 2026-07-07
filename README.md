@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
-Edit the configuration values at the top of `watcher.py` to customize:
+Edit the configuration variables near the top of watcher.py to customize:
 
 - Target URL
 - Check interval
@@ -79,6 +79,11 @@ The script will periodically check whether the Massar portal is reachable. Once 
 - Print a message to the console
 - Optionally send a Discord webhook notification
 
+## Requirements
+
+- Python 3.10 or newer
+- Internet connection
+
 ## Disclaimer
 
 This project is **not affiliated with Massar or the Moroccan Ministry of National Education.**
@@ -87,7 +92,7 @@ It does not log into accounts, bypass authentication, access student information
 
 ## Contributing
 
-Bug reports, feature requests, and pull requests are welcome.
+Bug reports, feature requests, and pull requests are welcome. If you have ideas for improving reliability or adding new notification methods, feel free to open an issue or submit a pull request.
 
 ## License
 
