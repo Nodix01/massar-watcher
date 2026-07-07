@@ -2,9 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/status-active-success) 
-
-# Massar Watcher
+![Status](https://img.shields.io/badge/status-active-success)
 
 A lightweight Python utility that monitors the Morocco Massar portal and alerts you as soon as it becomes reachable during periods of heavy traffic.
 
@@ -27,9 +25,52 @@ I originally built this as a personal utility and have now made it public so oth
 
 ## Installation
 
+Clone the repository:
+
 ```bash
 git clone https://github.com/Nodix01/massar-watcher.git
-
 cd massar-watcher
+```
 
+Install the required dependency:
+
+```bash
 pip install -r requirements.txt
+```
+
+## Configuration
+
+Edit the configuration values at the top of `watcher.py` to customize:
+
+- Target URL
+- Check interval
+- Maximum backoff
+- Discord webhook (optional)
+
+## Usage
+
+Run the watcher:
+
+```bash
+python watcher.py
+```
+
+The script will periodically check whether the Massar portal is reachable. Once the website responds successfully, it will:
+
+- Play a notification sound
+- Print a message to the console
+- Optionally send a Discord webhook notification
+
+## Disclaimer
+
+This project is **not affiliated with Massar or the Moroccan Ministry of National Education.**
+
+It does not log into accounts, bypass authentication, access student information, or retrieve grades. It only checks whether the public portal is reachable and notifies the user when it becomes available.
+
+## Contributing
+
+Bug reports, feature requests, and pull requests are welcome.
+
+## License
+
+This project is licensed under the MIT License.
